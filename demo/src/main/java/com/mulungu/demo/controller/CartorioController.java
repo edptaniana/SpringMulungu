@@ -16,11 +16,12 @@ public class CartorioController {
     @Autowired
     CartorioRepository cartorioRepository;
 
-    @PostMapping
-    public Cartorio criar (@RequestBody Cartorio cartorio){return cartorioRepository.save(cartorio);
+    @PostMapping("/create")
+    public Cartorio criar (@RequestBody Cartorio cartorio){
+        return cartorioRepository.save(cartorio);
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public List<Cartorio> listar(){
         return cartorioRepository.findAll();
     }

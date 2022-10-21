@@ -17,12 +17,14 @@ public class EnderecoController {
     @Autowired
     EnderecoRepository enderecoRepository;
 
-    @PostMapping
-    public Endereco criar (@RequestBody Endereco endereco){return enderecoRepository.save(endereco);
+    @PostMapping("/create")
+    public Endereco criar (@RequestBody Endereco endereco){
+        return enderecoRepository.save(endereco);
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public List<Endereco> listar(){
+
         return enderecoRepository.findAll();
     }
 }

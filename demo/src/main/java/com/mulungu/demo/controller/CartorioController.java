@@ -5,6 +5,8 @@ import com.mulungu.demo.Model.Usuario;
 import com.mulungu.demo.Repository.CartorioRepository;
 import com.mulungu.demo.Repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,4 +27,12 @@ public class CartorioController {
     public List<Cartorio> listar(){
         return cartorioRepository.findAll();
     }
+
+    @DeleteMapping("/delete")
+    @ResponseBody
+    public ResponseEntity<String> delete (@RequestParam Long id) {
+        cartorioRepository.deleteById(id);
+        return new ResponseEntity<String>("Deletado", HttpStatus.OK);
+    }
 }
+

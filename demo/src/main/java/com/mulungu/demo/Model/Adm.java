@@ -18,7 +18,7 @@ public class Adm {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idAdm;
 
     @Column(name = "nome", length = 100)
     @NotNull

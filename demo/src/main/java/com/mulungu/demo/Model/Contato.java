@@ -18,12 +18,15 @@ public class Contato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idContato;
+
     @Column(name = "TelefoneFixo", length = 15)
     @NotNull
     private String TelefoneFixo;
+
     @Column(name = "CelulardeContato", length = 15)
     @NotNull
     private String CelulardeContato;
+
     @Column(name = "emailContato", length = 15)
     @NotNull
     private String emailContato;

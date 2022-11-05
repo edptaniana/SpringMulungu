@@ -21,15 +21,18 @@ public class Cartorio {
     @Column(name = "nome", length = 100)
     @NotNull
     private String nome;
+
     @Column(name = "cnpj",length = 100)
     @NotNull
     private String cnpj;
+
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="idEndereco")
     private Endereco endereco;
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name="idContato")
-    private Contato contato;
+
+  //  @OneToMany(fetch = FetchType.LAZY)
+   // @JoinColumn(name="idContato")
+  //  private Contato contato;
 
 }
 

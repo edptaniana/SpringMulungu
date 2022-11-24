@@ -18,4 +18,15 @@ public class Agendamentos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idAgendamento;
 
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
+
+    @ManyToOne
+    @JoinColumn(name = "servico_id_servico")
+
+    private Servicos servico;
+    private Float valor;
+    private String status;
+
 }

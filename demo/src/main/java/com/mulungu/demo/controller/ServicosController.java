@@ -11,7 +11,6 @@ import java.util.List;
 @RequestMapping("/servicos")
 public class ServicosController {
 
-    @Autowired
     private ServicosService servicosService;
 
     @GetMapping("/")

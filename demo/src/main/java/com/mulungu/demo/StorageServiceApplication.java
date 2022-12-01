@@ -4,6 +4,8 @@ import com.mulungu.demo.service.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -13,17 +15,19 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 
-
+@ComponentScan(basePackages= {"com.mulungu.demo"})
+@EnableJpaRepositories
+@SpringBootApplication
 @EnableScheduling
 @RestController
 @RequestMapping("/document")
-@SpringBootApplication
+@CrossOrigin
 public class StorageServiceApplication {
 
 	@Autowired
 	private StorageService service;
 
-	@PostMapping
+	@PostMapping("/uploadDoc")
 	public ResponseEntity<?> uploadDocument(@RequestParam("document")MultipartFile file) throws IOException{
 		String uploadDocument = service.uploadDocument(file);
 		return ResponseEntity.status(HttpStatus.OK)

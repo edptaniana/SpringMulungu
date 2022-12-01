@@ -13,10 +13,11 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 
-@SpringBootApplication
+
 @EnableScheduling
 @RestController
 @RequestMapping("/document")
+@SpringBootApplication
 public class StorageServiceApplication {
 
 	@Autowired

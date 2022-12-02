@@ -19,7 +19,7 @@ import java.io.IOException;
 @RequestMapping("/document")
 public class StorageServiceApplication {
 
-	@Autowired
+
 	private StorageService service;
 
 	@PostMapping("/uploadDoc")

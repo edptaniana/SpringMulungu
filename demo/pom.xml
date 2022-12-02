@@ -26,9 +26,15 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.azure.spring</groupId>
-			<artifactId>spring-cloud-azure-starter</artifactId>
-		</dependency>
+
+		<groupId>org.mariadb.jdbc</groupId>
+
+		<artifactId>mariadb-java-client</artifactId>
+
+		<scope>runtime</scope>
+
+	</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>

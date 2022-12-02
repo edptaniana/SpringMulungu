@@ -1,3 +1,4 @@
 # SpringMulungu
 
-Back-end do Site: https://github.com/Qluks/GrowUp https://grow-up-porto.vercel.app/
+Front-end do Site: https://github.com/Qluks/GrowUp
+Deploy da aplicação: https://growupmulungu.netlify.app/

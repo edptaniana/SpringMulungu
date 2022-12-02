@@ -24,7 +24,6 @@ public class AdmController {
     public Adm criar (@RequestBody Adm adm){
         return admRepository.save(adm);
     }
-
     @GetMapping("/list")
     public List<Adm> listar(){
 

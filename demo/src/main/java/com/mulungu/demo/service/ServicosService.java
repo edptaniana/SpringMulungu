@@ -2,10 +2,10 @@ package com.mulungu.demo.service;
 
 import com.mulungu.demo.Model.Servicos;
 import com.mulungu.demo.Repository.ServicosRepository;
-import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 
-@Service
 public class ServicosService {
 
     private ServicosRepository servicosRepository;

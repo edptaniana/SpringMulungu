@@ -1,13 +1,11 @@
 package com.mulungu.demo.service;
 
 
-
 import com.mulungu.demo.Repository.StorageRepository;
 import com.mulungu.demo.entity.DocumentData;
 import com.mulungu.demo.util.DocumentUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -17,9 +15,7 @@ import java.util.Optional;
 public class StorageService {
 
 
-
     private StorageRepository repository;
-
 
     public String uploadDocument(MultipartFile file) throws IOException {
 

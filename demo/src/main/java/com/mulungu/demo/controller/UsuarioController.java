@@ -37,10 +37,12 @@ public class UsuarioController {
     }
 
 
+
     @DeleteMapping("/delete")
     @ResponseBody
     public ResponseEntity<String> delete (@RequestParam Long id) {
         usuarioRepository.deleteById(id);
         return new ResponseEntity<String>("Usuario deletado com sucesso", HttpStatus.OK);
     }
+
 }
